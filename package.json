@@ -1,0 +1,110 @@
+{
+  "name": "windmill-dashboard-react",
+  "version": "0.4.0",
+  "description": "A multi theme, completely accessible, with components and pages examples, (almost) ready for production dashboard.",
+  "private": true,
+  "scripts": {
+    "tailwind:dev": "tailwindcss build src/assets/css/tailwind.css -o src/assets/css/tailwind.output.css",
+    "tailwind:build": "tailwindcss build src/assets/css/tailwind.css -o src/assets/css/tailwind.output.css",
+    "prestart": "npm run tailwind:dev",
+    "start": "react-scripts start",
+    "prebuild": "npm run tailwind:build",
+    "build": "react-scripts build",
+    "cz": "git-cz",
+    "release": "release-it",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.10.11",
+    "@release-it/conventional-changelog": "^1.1.4",
+    "@svgr/webpack": "^5.5.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "@windmill/react-ui": "^0.5.0",
+    "antd": "^4.24.2",
+    "autoprefixer": "^9.8.8",
+    "axios": "^1.1.3",
+    "chart.js": "^3.9.1",
+    "classnames": "2.2.6",
+    "commitizen": "^4.2.5",
+    "cornerstone-core": "^2.6.1",
+    "cornerstone-math": "^0.1.10",
+    "cornerstone-tools": "^6.0.8",
+    "cornerstone-wado-image-loader": "^4.2.1",
+    "cross-env": "^7.0.3",
+    "cssnano": "^4.1.11",
+    "cz-conventional-changelog": "^3.3.0",
+    "dicom-parser": "^1.8.19",
+    "faker": "4.1.0",
+    "firebase": "^9.14.0",
+    "gh-pages": "^4.0.0",
+    "hammerjs": "^2.0.8",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.1",
+    "postcss-cli": "^7.1.2",
+    "react": "^17.0.2",
+    "react-axe": "^3.5.4",
+    "react-chartjs-2": "^4.3.1",
+    "react-cornerstone-viewport": "^4.1.5",
+    "react-dom": "^17.0.2",
+    "react-focus-lock": "^2.9.1",
+    "react-icons": "^4.6.0",
+    "react-number-format": "^5.1.2",
+    "react-router-dom": "5.2.0",
+    "react-scripts": "^4.0.3",
+    "react-toastify": "^8.2.0",
+    "react-transition-group": "4.4.1",
+    "release-it": "^13.7.2",
+    "tailwindcss": "^1.4.6",
+    "react-helmet": "^6.1.0",
+    "react-scroll": "^1.8.4",
+    "react-slick": "^0.28.1",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^5.3.1"
+  },
+  "keywords": [
+    "windmill",
+    "dashboard",
+    "admin",
+    "tailwind",
+    "react"
+  ],
+  "release-it": {
+    "github": {
+      "release": true
+    },
+    "npm": {
+      "publish": false
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": "angular",
+        "infile": "CHANGELOG.md"
+      }
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
